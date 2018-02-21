@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="vendor/mdl/material.min.css">
 
     <!-- nexpaq libs -->
-    <script type="text/javascript" src="js/NexpaqHeader.js"></script>
+    <script type="text/javascript" src="js/WebViewTileHeader.js"></script>
 
     <!-- partials -->
 
@@ -39,16 +39,21 @@
       <tbody>
         <tr>
           <td class="mdl-data-table__cell--non-numeric"><i class="material-icons">volume_up</i></td>
-          <td class="mdl-data-table__cell--non-numeric">Speaker</td>
+          <td class="mdl-data-table__cell--non-numeric">State</td>
           <td id="speakerStatus">n/a</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric"><i class="material-icons">build</i></td>
+          <td class="mdl-data-table__cell--non-numeric">Default state</td>
+          <td id="speakerDefaultStatus">n/a</td>
         </tr>
       </tbody>
     </table>
     <div class="main-controls">
     <br>
       <button class="mdl-button mdl-js-button mdl-button--raised" id="checkStatus">Check status</button><br><br>
-      <button class="mdl-button mdl-js-button mdl-button--raised" id="connect">Connect</button><br><br>
-      <button class="mdl-button mdl-js-button mdl-button--raised" id="disconnect">Disconnect</button>
+      <button class="mdl-button mdl-js-button mdl-button--raised" id="connect">Turn on</button><br><br>
+      <button class="mdl-button mdl-js-button mdl-button--raised" id="disconnect">Turn off</button>
     </div>
     
   </body>

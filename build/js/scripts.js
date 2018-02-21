@@ -28,10 +28,17 @@ document.addEventListener('NexpaqAPIReady', function(event) {
 			checkStatus();
 		}
 		if(event.data_source == 'StatusRequestResponse') {
-			if(event.variables.status == "connected") {
-				document.getElementById('speakerStatus').textContent = "Connected";
-			} else if(event.variables.status == "disconnected") {
-				document.getElementById('speakerStatus').textContent = "Disconnected"
+			if(event.variables.status == 'connected') {
+				document.getElementById('speakerStatus').textContent = 'On';
+			} else if(event.variables.status == 'disconnected') {
+				document.getElementById('speakerStatus').textContent = 'Off'
+			}
+			if(Nexpaq.Arguments[2] == 'moduware.speaker.module') {
+				if(event.variables.defaultState == 'connected') {
+					document.getElementById('speakerDefaultStatus').textContent = 'On';
+				} else if(event.variables.defaultState == 'disconnected') {
+					document.getElementById('speakerDefaultStatus').textContent = 'Off'
+				}
 			}
 		}
   });

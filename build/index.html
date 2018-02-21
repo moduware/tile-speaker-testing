@@ -33,7 +33,7 @@
         <tr>
           <th class="mdl-data-table__cell--non-numeric">Icon</th>
           <th class="mdl-data-table__cell--non-numeric">Title</th>
-          <th>Status</th>
+          <th>Value</th>
         </tr>
       </thead>
       <tbody>
@@ -47,13 +47,37 @@
           <td class="mdl-data-table__cell--non-numeric">Default state</td>
           <td id="speakerDefaultStatus">n/a</td>
         </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric"><i class="material-icons">bluetooth_searching</i></td>
+          <td class="mdl-data-table__cell--non-numeric">BT Name</td>
+          <td id="speakerBluetoothName">n/a</td>
+        </tr>
       </tbody>
     </table>
     <div class="main-controls">
     <br>
       <button class="mdl-button mdl-js-button mdl-button--raised" id="checkStatus">Check status</button><br><br>
-      <button class="mdl-button mdl-js-button mdl-button--raised" id="connect">Turn on</button><br><br>
-      <button class="mdl-button mdl-js-button mdl-button--raised" id="disconnect">Turn off</button>
+      <button class="mdl-button mdl-js-button mdl-button--raised" id="requestBluetoothName">Ask BT Name</button><br><br>
+      <div class="content-grid mdl-grid">
+        <div class="mdl-cell mdl-cell--2-col-phone">
+          <button class="mdl-button mdl-js-button mdl-button--raised" id="connect">Turn on</button>
+        </div>
+        <div class="mdl-cell mdl-cell--2-col-phone">
+          <button class="mdl-button mdl-js-button mdl-button--raised" id="disconnect">Turn off</button>
+        </div>
+      </div>
+      <center>Default state:</center>
+      <div class="content-grid mdl-grid">
+        <div class="mdl-cell mdl-cell--2-col-phone">
+          <button class="mdl-button mdl-js-button mdl-button--raised" id="setDefaultStateOn">Set on</button>
+        </div>
+        <div class="mdl-cell mdl-cell--2-col-phone">
+          <button class="mdl-button mdl-js-button mdl-button--raised" id="setDefaultStateOff">Set off</button>
+        </div>
+      </div>
+
+      
+      
     </div>
     
   </body>
